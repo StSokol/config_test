@@ -12,7 +12,8 @@ def test_add_to_busket_button_is_present(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     browser.get(link)
 
+    time.sleep(5)
+
     buttons = browser.find_elements_by_css_selector('button.btn-add-to-basket')
     assert len(buttons) > 0, "Не найдена кнопка 'Добавить в корзину'!"
 
-    #time.sleep(10)
